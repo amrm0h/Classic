@@ -1,0 +1,5 @@
+$maincolor: #0fff59;
+
+@mixin transition($prop: all, $ease: ease-in-out, $time: 0.3s) {
+    transition: $prop $ease $time;
+}

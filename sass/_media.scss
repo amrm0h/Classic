@@ -1,0 +1,174 @@
+
+@media (max-width: 1199.98px) {
+    
+}
+@media (max-width: 991.98px) {
+    
+    // footer fixes 
+        footer div.row div.col-12.col-md-6.col-lg-3 {
+        margin-bottom: 30px;
+    }
+    
+    
+}
+
+@media (max-width: 767.98px) {
+    
+    // header nav items
+    header nav.bg-dark .navbar-nav li {
+        margin-right: 0;
+        padding: 5px 0 4px 16px;
+        margin-bottom: 10px;
+        
+        &:first-of-type {
+            margin-top: 10px;
+        }
+        
+        &:hover .nav-link,
+        &.active > .nav-link {
+            transform: translateX(10px);
+        }
+    }
+    
+    // header carousal
+    
+    .owl-carousel.owl-drag {
+        .owl-item .item  h1 {
+            font-size: 25px;
+        }
+    }
+    
+    // footer big divs
+    
+    footer div.row div.col-12.col-md-6.col-lg-3 {
+        position: relative;
+    
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 103%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #FFF;
+        }
+    
+        ul.cat li:last-of-type {
+            border-bottom: none
+        }
+        
+        div.socials {
+            text-align: center;
+            margin-bottom: 2px
+        }
+    }
+    
+}
+
+@media (max-width: 575.98px) {
+    
+    // sections h2 fix
+    .services h2,
+    .team h2,
+    .projects h2 {
+        font-size: 25px
+    }
+    
+    .services div.service {
+        margin: 30px 0; 
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+
+    .owl-carousel.owl-drag {
+        .owl-item .item  h1 {
+            font-size: 30px;
+        }
+    }
+    
+    .projects .mix_container div.image:hover {
+        
+        span.one::before,
+        span.two::before {
+            width: 93.1%;
+        } 
+    }
+    
+    section.team div.col-md-2.mem {
+        
+        margin-top: 60px;
+        max-height: 94px;
+    
+    }
+     
+}
+
+
+@media (min-width: 500px) and (max-width: 575.98px) {
+    
+    .projects .mix_container div.image:hover {
+        
+        span.one::before,
+        span.two::before {
+            width: 95%;
+        } 
+    } 
+    
+}
+
+
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    
+    .projects .mix_container div.image:hover {
+        
+        span.one::before,
+        span.two::before {
+            width: 90.6%;
+        } 
+    } 
+}
+
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+    
+    .projects .mix_container div.image:hover {
+        
+            span.one::before,
+            span.two::before {
+                width: 92.1%;
+            } 
+        } 
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+.services {
+    padding-top: 70px;
+    h2 {
+        span::after {
+            width: 95%;
+        }
+    }
+    
+    div.service {
+        margin: 50px 0;
+        
+        & > div {
+            margin-top: 28px;
+        }
+        
+        .fas {
+                font-size: 40px;
+                display: inline-block;
+                color: #0fff59;
+                margin-right: 6px;
+                width: 109%;
+        }
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            margin-top: 15px;
+        }
+    }
+}

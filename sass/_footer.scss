@@ -1,0 +1,131 @@
+footer {
+    
+    padding: 70px 0 50px;
+    background-color: #444;
+    color: white;
+    
+    // globals
+    
+    ul {
+        margin-bottom: 0;
+    }
+    
+    h4 {
+        color: #e4e0e0;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    p {
+        color: #a09797;
+    }
+    
+    
+    // first div
+    
+    
+    
+    div.socials {
+        margin-top: 10px;
+        i {
+            color: #bdb2b2;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #FFF;
+            padding: 9px;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 5px;
+            cursor: pointer;
+            @include transition();
+            &:hover {
+                color: white;
+                border-color: white;
+            }
+        }
+    }
+    
+    
+    
+    
+    // Second div
+    
+    ul.lang {
+        li {
+            display: inline-block;
+            padding: 5px 14px;
+            border: 1px solid #d6cdcd;
+            font-size: 14px;
+            margin-bottom: 6px;
+            margin-right: 0;
+            color: #d6cdcd;
+            cursor: alias;
+        }
+    }
+    
+    
+    
+    // Third div
+    
+    div.post {
+        overflow: hidden;
+        img {
+            width: 65px;
+            height: 45px;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        div.post_words {
+            float: left;
+            margin-top: 5px;
+            h6 {
+                font-size: 13px;
+                color: #d6cdcd;
+            }
+            time {
+                color: #a09797;
+                font-size: 12px;
+            }
+        }
+    }
+    
+    // Last div
+    
+    ul.cat {
+        li {
+            padding: 6px 7px;
+            border-bottom: 1px solid #d6cdcd;
+            
+            a {
+                color: #d6cdcd;
+                 @include transition();
+                display: inline-block;
+            }
+            &:hover > a {
+                color: white;
+                transform: translateX(5px);
+                
+            }
+        }
+    }
+    
+    div.row:nth-of-type(2) {
+        
+        padding-top: 20px;
+        
+        i.fas.fa-heart {
+            color: red;
+        
+        }
+        
+    }
+    
+    
+}
+
+
+
+
+
+

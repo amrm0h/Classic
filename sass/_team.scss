@@ -1,0 +1,38 @@
+section {
+    .our_team  {
+        h2 span::after {
+            width: 95%;
+        }
+        
+        p {
+            margin-top: 20px
+        }
+    }
+    
+    div.col-md-2.mem {
+        max-height: 150px;
+        
+        .mem_over {
+            height: 100%;
+            padding: 2px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2),
+                        0 0 3px rgba(0,0,0,0.6);
+            @include transition();
+            img.img-fluid {
+                height: 100%;
+                width: 100%;
+                
+            }
+        }
+        &:hover {
+            .mem_over {
+                box-shadow: 5px 5px 8px rgba(0,0,0,0.2),
+                            5px 5px 8px rgba(0,0,0,0.6),
+                            5px 5px 8px rgba(0,0,0,0.9);
+                
+                transform: scale(1.1);
+            }
+        }
+    }
+}
