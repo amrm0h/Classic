@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Tahoma; }
+  font-family: Arial, Tahoma;
+  position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -49,6 +50,86 @@ hr {
 section {
   padding: 35px 0 35px; }
 
+.topbutton {
+  position: fixed;
+  right: 25px;
+  bottom: 30px;
+  width: 55px;
+  height: 55px;
+  background-color: #0fff59;
+  border: 5px solid #080071;
+  border-radius: 50%;
+  display: none;
+  font-size: 35px;
+  z-index: 555; }
+  .topbutton i.fas {
+    display: block;
+    color: #080071; }
+
+.spinner {
+  position: fixed;
+  background-color: #0fff59;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1031;
+  text-align: center;
+  line-height: 50px;
+  display: none; }
+
+.spinner span {
+  display: inline-block;
+  position: fixed;
+  margin-left: -25px;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 5px solid #000;
+  border-collapse: collapse;
+  -webkit-animation: spinner 0.8s infinite linear forwards;
+          animation: spinner 0.8s infinite linear forwards; }
+  .spinner span:first-of-type {
+    top: 49%;
+    left: 50%;
+    border-top-color: #b70d0d;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s; }
+  .spinner span:nth-of-type(2) {
+    top: 52%;
+    left: 49%;
+    border-top-color: #a61dbf;
+    -webkit-animation-duration: .55s;
+            animation-duration: .55s; }
+  .spinner span:nth-of-type(3) {
+    top: 52%;
+    left: 51%;
+    border-top-color: #0e1baf;
+    -webkit-animation-duration: .6s;
+            animation-duration: .6s; }
+  .spinner span:nth-of-type(4) {
+    top: 55%;
+    left: 50%;
+    border-top-color: #222;
+    -webkit-animation-duration: .65s;
+            animation-duration: .65s; }
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 header {
   background: url(../images/web-design.jpg);
   background-size: cover;
@@ -86,13 +167,18 @@ header {
         border: 1px solid #FFF;
         border-radius: 50%;
         position: absolute;
-        z-index: 3000; }
+        z-index: 3000;
+        -webkit-transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.3s; }
         header div.overlay .owl-carousel.owl-drag .owl-nav button.owl-prev {
           top: 80px;
           left: 20px; }
         header div.overlay .owl-carousel.owl-drag .owl-nav button.owl-next {
           top: 80px;
           right: 20px; }
+        header div.overlay .owl-carousel.owl-drag .owl-nav button:hover {
+          color: #0fff59;
+          border-color: #0fff59; }
     header div.overlay > button {
       background: transparent;
       outline: none;

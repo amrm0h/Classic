@@ -45,6 +45,7 @@ header {
                 border-radius: 50%;
                 position: absolute;
                 z-index: 3000;
+                @include transition();
                 &.owl-prev {
                     top: 80px;
                     left: 20px;
@@ -52,6 +53,10 @@ header {
                 &.owl-next {
                     top: 80px;
                     right: 20px;
+                }
+                &:hover {
+                    color: $maincolor;
+                    border-color: $maincolor;
                 }
             }
             

@@ -1,5 +1,16 @@
 /* global $, alert, console, document*/
 
+
+let mySpinner = $(".spinner");
+
+
+$(mySpinner).css("display", "block").delay(2500).fadeOut(500, function () {
+    
+    $(this).css("display", "none").remove();
+    $("body").css("overflow", "visible");
+    
+});
+
 $(function () {
     "use strict";
     
@@ -11,6 +22,35 @@ $(function () {
     let mixingButtons = $(".projects .buttons button");
     let headerHeight = $("header").height(); 
     let readMoreButton = $("header div.overlay > button");
+    let scrollToTopButton = $(".topbutton");
+    
+    
+    // Appear scroltotopbutton on scroll 
+    function toTopButton() {
+        if ($(window).scrollTop() >= 600) {
+            $(scrollToTopButton).fadeIn(500, function () {
+                $(this).css("display", "block"); 
+            });
+        } else {
+            
+            $(scrollToTopButton).fadeOut(500, function () {
+                
+                $(this).css("display", "none");
+                
+            });   
+        }
+    }
+    
+    $(scrollToTopButton).click(function () {
+        
+        $("body, html").animate({
+            
+            scrollTop: 0
+            
+        }, 500);
+    });
+    
+    
     
     
     // fire mixitup
@@ -25,6 +65,15 @@ $(function () {
     // prevent default of a
     $(allA).click(function (e) {
         e.preventDefault();
+    });
+    
+    
+    // fire niceScroll.js
+    $("html, body").niceScroll({
+        cursorcolor: "#0fff59",
+        cursorwidth: "10px",
+        cursorborder: "1px solid #0fff59",
+        cursorborderradius: "2px"
     });
     
     
@@ -96,6 +145,8 @@ $(function () {
     $(window).scroll(function () {
         changeNavBarBGColor();
         syncNavItems();
+        toTopButton();
+        
     });
     
     
