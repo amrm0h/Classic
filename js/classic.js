@@ -4,7 +4,7 @@
 let mySpinner = $(".spinner");
 
 
-$(mySpinner).css("display", "block").delay(2500).fadeOut(500, function () {
+$(mySpinner).css("display", "block").delay(4000).fadeOut(500, function () {
     
     $(this).css("display", "none").remove();
     $("body").css("overflow", "visible");
@@ -23,6 +23,7 @@ $(function () {
     let headerHeight = $("header").height(); 
     let readMoreButton = $("header div.overlay > button");
     let scrollToTopButton = $(".topbutton");
+    let siteBrand = $("header .navbar-brand");
     
     
     // Appear scroltotopbutton on scroll 
@@ -61,6 +62,12 @@ $(function () {
     let wow = new WOW();
     
     wow.init();
+    
+    //fire funnyText on Brand
+    $(siteBrand).funnyText({
+		speed: 500,
+		direction: 'both'
+	});
     
     // prevent default of a
     $(allA).click(function (e) {
